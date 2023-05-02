@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
-import { View, Text, StyleSheet, FlatList, Button, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, FlatList, Button, TouchableOpacity, Touchable } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { Context } from '../context/BlogContext';
 import {FontAwesome5} from '@expo/vector-icons'
+import {Ionicons} from '@expo/vector-icons'
 
 const IndexScreen = ({navigation}) => {
   const { state, addBlogPost, deleteBlogPost } = useContext(Context);
@@ -36,6 +38,7 @@ const IndexScreen = ({navigation}) => {
     </View>
   );
 };
+
 
 const styles = StyleSheet.create({
   margin:{
